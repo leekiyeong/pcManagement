@@ -1,0 +1,242 @@
+/* 기본 스타일 */
+body {
+	font-family: Arial, sans-serif;
+}
+
+#header {
+	max-width: 3000px;
+	height: 60px;
+	border: 1px solid #000;
+	background: #100101;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	color: white;
+	font-size: 24px;
+	line-height: 60px;
+}
+
+.container {
+	display: flex;
+}
+
+.grid-leftcontainer, .grid-rightcontainer {
+	display: grid;
+	grid-template-columns: repeat(5, 90px); /* 5개의 열, 각 열은 90px */
+	grid-template-rows: repeat(6, 75px); /* 6개의 행, 각 행은 75px */
+	grid-gap: 10px; /* 사각형 사이의 간격 조절 */
+	margin: 20px; /* 좌우 여백 설정 */
+}
+
+.grid-bottomcontainer {
+	display: grid;
+	grid-template-columns: repeat(1, 90px);
+	grid-template-rows: repeat(4, 75px);
+	grid-gap: 10px;
+	margin-left: 100px;
+	margin-top: 100px;
+}
+
+.grid-item {
+	width: 90px;
+	height: 75px;
+	background-color: #ccc; /* 사각형 배경색 */
+}
+
+/* 좌측1열에 위치할 5개의 사각형 */
+.left-Firstrow {
+	margin-top: 120px; /* 위로 120px 떨어집니다. */
+	margin-left: 80px; /* 좌측에서 80px 떨어집니다. */
+}
+
+/* 좌측2열에 위치할 5개의 사각형 */
+.left-Secondrow {
+	margin-left: 80px; /* 좌측에서 80px 떨어집니다. */
+	margin-top: 150px; /* 위에서 150px 떨어집니다. */
+}
+
+/* 좌측3열에 위치할 5개의 사각형 */
+.left-Thirdrow {
+	margin-left: 80px;
+	margin-top: 300px;
+}
+
+/* 좌측4열에 위치할 5개의 사각형 */
+.left-Fourthrow {
+	margin-left: 80px;
+	margin-top: 330px;
+}
+
+/* 좌측5열에 위치할 5개의 사각형 */
+.left-Fifthrow {
+	margin-left: 80px;
+	margin-top: 480px;
+}
+
+/* 좌측6행에 위치할 5개의 사각형 */
+.left-Sixthrow {
+	margin-left: 80px;
+	margin-top: 510px;
+}
+
+/* 우측1열에 위치할 5개의 사각형 */
+.right-Firstrow {
+	margin-top: 120px; /* 위로 120px 떨어집니다. */
+	margin-left: 200px; /* 좌측에서 80px 떨어집니다. */
+}
+
+/* 우측2열에 위치할 5개의 사각형 */
+.right-Secondrow {
+	margin-left: 200px; /* 좌측에서 80px 떨어집니다. */
+	margin-top: 150px; /* 위에서 65px 떨어집니다. */
+}
+
+/* 우측3열에 위치할 5개의 사각형 */
+.right-Thirdrow {
+	margin-left: 200px;
+	margin-top: 300px;
+}
+
+/* 우측4열에 위치할 5개의 사각형 */
+.right-Fourthrow {
+	margin-left: 200px;
+	margin-top: 330px;
+}
+
+/* 우측5열에 위치할 5개의 사각형 */
+.right-Fifthrow {
+	margin-left: 200px;
+	margin-top: 480px;
+}
+
+/* 우측6행에 위치할 5개의 사각형 */
+.right-Sixthrow {
+	margin-left: 200px;
+	margin-top: 510px;
+}
+
+/* 회원버튼 */
+.member {
+	width: 200px;
+	height: 200px;
+	margin-left: 170px;
+	font-size: 20px; /* 글자 크기 조절 */
+	text-align: center; /* 가운데 정렬 */
+	font-weight: bold; /* 볼드체 설정 (선택사항) */
+	cursor: pointer;
+}
+
+/* 비회원버튼 */
+.nonMembers {
+	width: 200px;
+	height: 200px;
+	margin-top: 150px;
+	margin-left: 170px;
+	font-size: 20px; /* 글자 크기 조절 */
+	text-align: center; /* 가운데 정렬 */
+	font-weight: bold; /* 볼드체 설정 (선택사항) */
+	cursor: pointer;
+}
+
+.member img, .nonMembers img {
+	display: block; /* 블록 요소로 설정하여 가운데 정렬 */
+	margin: 0 auto; /* 가운데 정렬을 위한 마진 설정 */
+	max-width: 180px; /* 이미지 최대 너비 */
+	max-height: 170px; /* 이미지 최대 높이 */
+}
+
+.member::after, .nonMembers::after {
+	content: ""; /* 가상 요소 생성 */
+	display: block; /* 블록 요소로 설정 */
+}
+/* 현위치 */
+.myLocation {
+	width: 100px;
+	height: 150px;
+	margin-left: 150px;
+	margin-top: 400px;
+}
+
+.myLocation img {
+	max-width: 30px; /* 이미지 최대 너비 */
+	max-height: 30px; /* 이미지 최대 높이 */
+}
+
+.modal {
+	display: none; /* 초기에는 모달을 숨깁니다 */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7); /* 모달 뒷 배경의 투명도 조절 */
+	z-index: 1;
+}
+
+/* 로그인모달 컨텐츠 */
+.modal-LoginContent {
+	background-color: #fff;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 20%; /* 모달 창 너비 조절 */
+	height: 320px;
+	top: 25%;
+	position: relative;
+}
+/* 회원가입모달 컨텐츠 */
+.modal-SignUpContent {
+	background-color: #fff;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 20%; /* 모달 창 너비 조절 */
+	height: 500px;
+	top: 20%;
+	position: relative;
+}
+
+.close {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+/* 스크롤 막기 */
+body.modal-open {
+	overflow: hidden;
+}
+
+/* 로그인 양식 스타일 */
+h2 {
+	text-align: center;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+}
+
+input[type="text"], input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%;
+}
+
+input[type="submit"]:hover {
+	background-color: #45a049;
+}
